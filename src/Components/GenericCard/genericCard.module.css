@@ -1,0 +1,19 @@
+
+.boxGeneric{padding: 2rem;}
+
+.button{ background: none;
+    border-radius: 1rem;
+    border-style: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: inherit; }
+    
+    .boxImg{background-color: white;border-radius: 1rem 1rem 0 0;}
+    
+    .img{height: 10rem;width: 10.5rem; border-radius: 1rem 1rem 0 0; object-fit: contain;}
+    
+    .text{font-size: 1.2rem; font-family: 'Courier New', Courier, monospace; font-weight: bold; background-color: rgb(193 104 32); color: white; border-radius: 0 0 1rem 1rem;}

@@ -1,0 +1,14 @@
+.background {background-image: url("https://static.vecteezy.com/system/resources/previews/005/220/628/non_2x/seamless-pattern-with-cute-dogs-portraits-for-children-and-pets-illustration-vector.jpg");
+    filter:contrast(1.1);
+    min-height: 100vh;}
+
+.row {display: flex; flex-direction: row; flex-wrap: wrap;}
+
+.justcenter{display: flex; align-items: center;}
+.column {display: flex; flex-direction: column;}
+.center{display: flex;justify-content: center; margin: 0%;}
+.container{display: flex;justify-content: center;}
+
+
+.products{display: flex; flex-direction: row;}
+.categories{ display: flex; flex-direction: row;}

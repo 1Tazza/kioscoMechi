@@ -1,0 +1,14 @@
+.center {display:flex; justify-content:center}
+
+.box{ color: black; font-family:Arial, Helvetica, sans-serif; background-color: white; width: 10.5rem; height: 16rem;}
+
+
+.img {height: 10rem;width: 10.5rem; object-fit: contain;}
+
+.margin{ margin: 0;}
+
+.price{font-size: 2rem; font-family: "open sans";}
+
+.boxDescription{display: flex;flex-direction: column ;height: 35%;width: 10.5rem}
+
+.containerImg{height: 65%;}
