@@ -34,7 +34,7 @@ const Modal = ({ closeModal, product }) => {
       <div className={c.modalContent} onClick={(e) => e.stopPropagation()}>
         <div>
          <h2>{product.name} {product.brand}</h2>
-         <p>Precio: {product.price}</p>
+         <h4>Precio: {product.price}</h4>
          <button onClick={closeModal}>Cerrar</button>
 
          <button onClick={() => setEditionState(true)} >Editar</button>

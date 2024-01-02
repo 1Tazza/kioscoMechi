@@ -15,7 +15,7 @@ export default function Card(props){
             <p className={c.margin}>{props.name} {props.brand}</p>
          </div>
     
-         <div className={c.price}>${props.price}</div>
+         <div className={c.price}><h4>${props.price}</h4></div>
         </div>
 
     </div>)

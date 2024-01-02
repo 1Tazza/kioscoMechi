@@ -11,7 +11,7 @@ const CardNewProd = ({ closeModal}) => {
     price: null,
     img: "",
     brand: "",
-    categories: ""
+    category: ""
   })
 
   const handleInfoChange = (e) => {
@@ -20,15 +20,14 @@ const CardNewProd = ({ closeModal}) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     setProductState( (prevInfo) => ({...prevInfo, price: parseInt(productState.price)}))
     setProductState( (prevInfo) => ({...prevInfo, brand: [productState.brand]}))
-    console.log("marca estado en array?",productState.brand)
+    
 
   }
 
   function handleCategory(e) {
-    setProductState( (prevInfo) => ({...prevInfo, categories: e.target.value}))
+    setProductState( (prevInfo) => ({...prevInfo, category: e.target.value}))
    
  }
 

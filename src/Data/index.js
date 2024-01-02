@@ -4,7 +4,7 @@ export const json = [{
     brand: ["Preferido"],
     quantity: "",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/Pan+Rallado.png",
-    categories: ["almacen"],
+    category: "almacen",
     company: [""]
 },{
     name: "Queso Rallado Grande",
@@ -12,7 +12,7 @@ export const json = [{
     brand: ["Serenisima"],
     quantity: "",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/queso+rallado+grande.jpg",
-    categories: ["almacen"],
+    category: "almacen",
     company: ["Serenisima"]
 },{
     name: "Pan Dulce",
@@ -20,7 +20,7 @@ export const json = [{
     brand: ["Arcor"],
     quantity: "",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/Arcor+Pan+Dulce.png",
-    categories: ["almacen"],
+    category: "almacen",
     company: [""]
 },{
     name: "Termo",
@@ -28,7 +28,7 @@ export const json = [{
     brand: ["Taragui"],
     quantity: "",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/termo+taragui.jpg",
-    categories: ["almacen"],
+    category: "almacen",
     company: [""]
 },{
     name: "Queso Rallado Pequeño",
@@ -36,7 +36,7 @@ export const json = [{
     brand: ["Taragui"],
     quantity: "",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/queso+rallado+peque%C3%B1o+la+serenisima.png",
-    categories: ["almacen"],
+    category: "almacen",
     company: [""]
 },{
     name: "Yerba Mini",
@@ -44,7 +44,7 @@ export const json = [{
     brand: ["Taragui"],
     quantity: "500g",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/Yerba+taragui+mini.png",
-    categories: ["almacen"],
+    category: "almacen",
     company: [""]
 },{
     name: "Sobres Endulzantes Edulcorante",
@@ -52,7 +52,7 @@ export const json = [{
     brand: ["Hileret"],
     quantity: "",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/sobres+de+endulzante+hileret.jpg",
-    categories: ["almacen"],
+    category: "almacen",
     company: [""]
 },{
     name: "Yerba Mini",
@@ -60,7 +60,7 @@ export const json = [{
     brand: ["Playadito"],
     quantity: "500g",
     img:"https://kiosko-mechi.s3.us-east-2.amazonaws.com/Productos-Almacen/Yerba+playadito+mini.png",
-    categories: ["almacen"],
+    category: "almacen",
     company: [""]
 }]
 

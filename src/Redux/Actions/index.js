@@ -4,7 +4,7 @@ export const GET_PRODUCTS = "GET_PRODUCTS";
 export const GET_PRODUCTS_FILTERED = "GET_PRODUCTS_FILTERED";
 export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";
 
-const URL_DEPLOY = process.env.URL_DEPLOY
+const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
 /* const products = [{
     name: "Pan Rallado",
     price: 1000,

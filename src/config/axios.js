@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const URL_DEPLOY = process.env.URL_DEPLOY
+const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
 
  const baseURL = URL_DEPLOY
 //process.env.baseURL
