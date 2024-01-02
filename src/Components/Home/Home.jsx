@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from  "react-redux"
 import { GenericCard } from "../GenericCard/GenericCard"
 import c from "./home.module.css"
 import Card from "../Card/Card"
+import Modal from "../CardModal/CardModal"
 import SearchBar from "../SearchBar/SearchBar"
 import * as actions from "../../Redux/Actions"
 
@@ -12,7 +13,21 @@ export default function Home() {
     
     const dispatch = useDispatch()
 
-    const [state, setState] = useState({})
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    const [categoriesOpen, setCategoriesOpen] = useState(true);
+
+    const openModal = (product) => {
+      setSelectedProduct(product);
+      setModalOpen(true);
+    };
+  
+    const closeModal = () => {
+      setSelectedProduct(null);
+      setModalOpen(false);
+    };
+
    
     const products = useSelector( state => state.products)
 
@@ -24,9 +39,9 @@ export default function Home() {
 
     return(<div>
 
-    <SearchBar/>
+    <SearchBar setCategoriesOpen={setCategoriesOpen}/>
 
-   <div className={c.categories}>
+   {categoriesOpen ? <div className={c.categories}>
     <div>
     {GenericCard("Almacén","https://kiosko-mechi.s3.us-east-2.amazonaws.com/almacen-ok.png")}
     </div>
@@ -45,11 +60,15 @@ export default function Home() {
     <div>
     {GenericCard("Cigarros y Tabaco", "https://kiosko-mechi.s3.us-east-2.amazonaws.com/Cigarros3.png")}
     </div>        
-   </div>
+   </div> : null}
       
    <div className={c.products}>
-    {filProducts.length > 0 ? filProducts.map(el => <Card name={el.name} brand={el.brand} price={el.price} img={el.img}/> ) : products.map(el => <Card name={el.name} brand={el.brand} price={el.price} img={el.img}/> ) }
+    {filProducts.length > 0 ? filProducts.map(el => <div key={el.id} onClick={() => openModal(el)}><Card id={el.id} name={el.name} brand={el.brand} price={el.price} img={el.img}/></div> ) : products.map(el => <div key={el.id} onClick={() => openModal(el)}><Card id={el.id} name={el.name} brand={el.brand} price={el.price} img={el.img}/></div> ) }
    </div>
+
+   {modalOpen && (
+        <Modal closeModal={closeModal} product={selectedProduct} />
+      )}
 
     </div>)
 }

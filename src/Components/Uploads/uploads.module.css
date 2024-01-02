@@ -1,0 +1,32 @@
+
+.customUploadBtn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .customUploadBtn input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 100px; /* Tamaño grande para abarcar todo el botón */
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .customUploadBtn label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .plusSymbol {
+    margin-right: 5px;
+  }
+
+  .error{font-size: large; color: red;}

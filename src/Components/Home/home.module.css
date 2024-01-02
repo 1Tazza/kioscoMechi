@@ -10,5 +10,11 @@
 .container{display: flex;justify-content: center;}
 
 
-.products{display: flex; flex-direction: row;}
-.categories{ display: flex; flex-direction: row;}
+.products{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 0% 10%;}
+.categories{ display: flex; flex-direction: row;flex-wrap: wrap; justify-content: center; padding: 0% 5%;}
+
+
+@media(min-width: 1200px){ 
+    
+   .products{display: flex; flex-direction: row; flex-wrap: wrap;}
+}

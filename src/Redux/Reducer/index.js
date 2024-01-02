@@ -26,5 +26,15 @@ export default function rootReducer(state = initialState, action) {
         return{...state, filProducts: filteredProducts}
     }
 
+    else if(action.type === "UPDATE_PRODUCTS") {
+        //In order to find the one product that didn´t update in the state array 'filProducts'
+        function filProductUpdate() {
+            return state.products.filter( products=> {
+            
+        })}
+
+        return {...state, products: action.payload}
+    }
+
     else {return state}
 }
