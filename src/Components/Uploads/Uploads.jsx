@@ -6,7 +6,7 @@ import useMutation from "../../hooks/useMutation"
 
 const Uploads = ({state, fileState}) => {
    
-const dispatch = useDispatch()
+/* const dispatch = useDispatch() */
     const URL = "/images/newProduct"
 
     const ErrorText = (children, ...props) => (
@@ -14,7 +14,6 @@ const dispatch = useDispatch()
             {children}
         </p>
     )
-    const [imageUploaded, setImageUploaded] = useState(false);
 
     const {
         mutate: uploadImage, 
@@ -50,7 +49,6 @@ const dispatch = useDispatch()
         form.append("obj", JSON.stringify(obj))
         await uploadImage(form)
 
-        setImageUploaded(true);
       }
      
     return(<div>

@@ -20,7 +20,7 @@ export default function rootReducer(state = initialState, action) {
               const brandMatches = product.brand.some(brand => {
                 if(typeof(brand) === "object") { return brand[0].toLowerCase().includes(name.toLowerCase()) }
                 else if(typeof(brand) === "string") {  return brand.toLowerCase().includes(name.toLowerCase()) }
-               
+               return false
             });
               return productNameMatches || brandMatches;
             });

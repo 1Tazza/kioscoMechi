@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from "react";
 import {useDispatch} from  "react-redux"
 import c from "./cardnewprod.module.css"; 
-import Uploads from "../Uploads/Uploads";
 import * as actions from "../../Redux/Actions"
 import useMutation from "../../hooks/useMutation"
 
@@ -24,7 +23,7 @@ const CardNewProd = ({ closeModal}) => {
 }, [dispatch, imageUploaded]);
 
   const {
-      mutate: uploadImage, 
+      /* mutate: uploadImage,  */
       isLoading: uploading, 
       error: uploadError} = useMutation({url: URL})
 
