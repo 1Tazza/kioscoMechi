@@ -10,7 +10,7 @@ const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
 const URL_LOCAL = "http://localhost:3001/"
 
 const USER_ID = 123;
-const baseURL = URL_LOCAL
+const baseURL = URL_DEPLOY
 /* const products = [{
     name: "Pan Rallado",
     price: 1000,
