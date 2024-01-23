@@ -30,6 +30,10 @@ const closeModal = () => {
   setModalOpen(false);
 };
 
+const handleInicio = (e) => {
+  dispatch(actions.getProductsFiltered(""));
+  };
+
 
 const handleInputChange = (e) => {
   const value = e.target.value;
@@ -39,6 +43,8 @@ const handleInputChange = (e) => {
 
 return(<div className={c.padding}>
     
+    <button onClick={handleInicio} >Inicio</button>
+
     <input className={c.input} value={name} onChange={e=> handleInputChange(e)} placeholder="Nombre.." type="text" />
     {/* <button className={c.button} onClick={() => name.length > 0 ? dispatch(actions.getDogByRace(name)): null}>Buscar</button> */}
     

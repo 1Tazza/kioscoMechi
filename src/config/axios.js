@@ -1,8 +1,8 @@
 import axios from "axios"
+const URL_LOCAL = "http://localhost:3001/"
+const _DEPLOY = "https://kioskomechi.up.railway.app/"
 
-const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
-
- const baseURL = URL_DEPLOY
+const baseURL = URL_LOCAL
 //process.env.baseURL
 const USER_ID = 123;
 

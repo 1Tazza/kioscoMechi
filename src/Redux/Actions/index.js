@@ -2,9 +2,15 @@ import axios from "axios"
 
 export const GET_PRODUCTS = "GET_PRODUCTS";
 export const GET_PRODUCTS_FILTERED = "GET_PRODUCTS_FILTERED";
+export const GET_PRODUCTS_FILTERED_BY_CAT = "GET_PRODUCTS_FILTERED_BY_CAT";
 export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";
+export const POST_NEW_PRODUCT = "POST_NEW_PRODUCT";
 
 const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
+const URL_LOCAL = "http://localhost:3001/"
+
+const USER_ID = 123;
+const baseURL = URL_LOCAL
 /* const products = [{
     name: "Pan Rallado",
     price: 1000,
@@ -428,24 +434,42 @@ const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
 }; */
 
 export const getProducts = () => {
-    return function(dispatch) {
-    return axios.get(`${URL_DEPLOY}products`)
-    .then(e => e.data)
-    .then(res =>  dispatch({type: "GET_PRODUCTS", payload: res}))
-    
+    return function (dispatch) {
+        return axios.get(`${baseURL}products`)
+            .then(e => e.data)
+            .then(res => dispatch({ type: "GET_PRODUCTS", payload: res }))
+
     }
 };
 
 export const getProductsFiltered = (name) => {
-    return {type: "GET_PRODUCTS_FILTERED", payload: name}
-     
+    return { type: "GET_PRODUCTS_FILTERED", payload: name }
+
+};
+
+export const getProductsFilteredByCat = (category) => {
+    return { type: "GET_PRODUCTS_FILTERED_BY_CAT", payload: category }
+
 };
 
 export const updateProducts = (json) => {
-    return function(dispatch) {
-    return axios.put(`${URL_DEPLOY}products`,json)
-    .then(e => e.data)
-    .then(res =>  dispatch({type: "UPDATE_PRODUCTS", payload: res}))
-    
+    return function (dispatch) {
+        return axios.put(`${baseURL}products`, json)
+            .then(e => e.data)
+            .then(res => dispatch({ type: "UPDATE_PRODUCTS", payload: res }))
+
     }
 }
+
+export const postNewProduct = (json) => {
+    return function (dispatch) {
+        return axios.post(`${baseURL}images/newProduct`, json, {
+            headers: {
+                "x-user-id": USER_ID
+            }
+        })
+            .then(e => e.data)
+            .then(res => dispatch({ type: "POST_NEW_PRODUCT", payload: res }))
+
+    }
+};

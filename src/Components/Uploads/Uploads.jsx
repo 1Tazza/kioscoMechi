@@ -1,11 +1,12 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
 import c from "./uploads.module.css"
 import useMutation from "../../hooks/useMutation"
 /* import useQuery from "../../hooks/useQuery" */
 
-const Uploads = ({state}) => {
-    
-
+const Uploads = ({state, fileState}) => {
+   
+const dispatch = useDispatch()
     const URL = "/images/newProduct"
 
     const ErrorText = (children, ...props) => (
@@ -13,6 +14,7 @@ const Uploads = ({state}) => {
             {children}
         </p>
     )
+    const [imageUploaded, setImageUploaded] = useState(false);
 
     const {
         mutate: uploadImage, 
@@ -27,12 +29,19 @@ const Uploads = ({state}) => {
 
     const handleUploadImg = async(e) => {
 
-        const file = e.target.files[0];
+        /* const file = e.target.files[0]; */
+        if(!fileState) {
+            setError("Primero debe seleccionar una imagen")
+            e.preventDefault()
+              return;
+        }
+
+        const file = fileState
         const obj = state
-        console.log(obj)
 
         if(!validFileTypes.find(type => type === file.type)) {
               setError("La imagen debe ser de formato JPG/PNG")
+              e.preventDefault()
               return;
         }
 
@@ -40,16 +49,16 @@ const Uploads = ({state}) => {
         form.append("image", file)
         form.append("obj", JSON.stringify(obj))
         await uploadImage(form)
+
+        setImageUploaded(true);
       }
      
     return(<div>
 
     
          <div class={c.customUploadBtn}>
-            <input isLoading={uploading} type="file" id={c.fileInput} onChange={handleUploadImg}/>
-            <label for="fileInput">
-             Crear
-            </label>
+            {/* <input isLoading={uploading} type="file" id={c.fileInput} onChange={handleUploadImg}/> */}
+            <button  isLoading={uploading} id={c.fileInput} onClick={handleUploadImg}>Crear</button>
          </div>
 
          {error && ErrorText(error)}
