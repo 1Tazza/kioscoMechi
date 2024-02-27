@@ -1,6 +1,8 @@
 import axios from "axios"
-/* const URL_LOCAL = "http://localhost:3001/" */
-const _DEPLOY = "https://kioskomechi.up.railway.app/"
+const URL_LOCAL = "http://localhost:3001/"
+
+/* const _DEPLOY = "https://kioskomechi.up.railway.app/" */
+const _DEPLOY = "https://kiosco-mechi-backend.vercel.app/"
 
 const baseURL = _DEPLOY
 //process.env.baseURL

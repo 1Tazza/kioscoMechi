@@ -6,8 +6,10 @@ export const GET_PRODUCTS_FILTERED_BY_CAT = "GET_PRODUCTS_FILTERED_BY_CAT";
 export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";
 export const POST_NEW_PRODUCT = "POST_NEW_PRODUCT";
 
-const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
-/* const URL_LOCAL = "http://localhost:3001/" */
+/* const URL_DEPLOY = "https://kioskomechi.up.railway.app/" */
+
+const URL_DEPLOY = "https://kiosco-mechi-backend.vercel.app/"
+const URL_LOCAL = "http://localhost:3001/"
 
 const USER_ID = 123;
 const baseURL = URL_DEPLOY
