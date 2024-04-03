@@ -24,11 +24,14 @@ useEffect(() => {
 
 const openModal = (product) => {
   setModalOpen(true);
+  dispatch(actions.modalCreationSwitch(true))
 };
 
 const closeModal = () => {
   setModalOpen(false);
+  dispatch(actions.modalCreationSwitch(false))
 };
+
 
 const handleInicio = (e) => {
   dispatch(actions.getProductsFiltered(""));

@@ -5,11 +5,12 @@ export const GET_PRODUCTS_FILTERED = "GET_PRODUCTS_FILTERED";
 export const GET_PRODUCTS_FILTERED_BY_CAT = "GET_PRODUCTS_FILTERED_BY_CAT";
 export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";
 export const POST_NEW_PRODUCT = "POST_NEW_PRODUCT";
+export const MODAL_CREATION_SWITCH = "MODAL_CREATION_SWITCH";
 
-/* const URL_DEPLOY = "https://kioskomechi.up.railway.app/" */
+const URL_DEPLOY = "https://kioskomechi.up.railway.app/"
 
-const URL_DEPLOY = "https://kiosco-mechi-backend.vercel.app/"
-const URL_LOCAL = "http://localhost:3001/"
+/* const URL_DEPLOY = "https://kiosco-mechi-backend.vercel.app/" */
+/* const URL_LOCAL = "http://localhost:3001/" */
 
 const USER_ID = 123;
 const baseURL = URL_DEPLOY
@@ -474,4 +475,10 @@ export const postNewProduct = (json) => {
             .then(res => dispatch({ type: "POST_NEW_PRODUCT", payload: res }))
 
     }
+};
+
+
+export const modalCreationSwitch = (state) => {
+    return { type: "MODAL_CREATION_SWITCH", payload: state }
+
 };

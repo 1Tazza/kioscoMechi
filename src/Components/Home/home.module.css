@@ -9,6 +9,7 @@
 .center{display: flex;justify-content: center; margin: 0%;}
 .container{display: flex;justify-content: center;}
 
+.positionUnset{position: unset;}
 
 .products{display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 0% 10%;}
 .categories{ display: flex; flex-direction: row;flex-wrap: wrap; justify-content: center; padding: 0% 5%;}

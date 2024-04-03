@@ -2,6 +2,7 @@ const initialState = {
     products: [],
     characters: [],
     filProducts: [],
+    modalCreationOpen: null,
     currentPage: 1,
     itemsPerPage: 9
 }
@@ -52,6 +53,11 @@ export default function rootReducer(state = initialState, action) {
     
         // Devuelve un nuevo objeto de estado con el nuevo array de productos
         return {...state, products: newProductsArray}
+    }
+
+    else if (action.type === "MODAL_CREATION_SWITCH") {
+    
+        return {...state, modalCreationOpen: action.payload}
     }
 
     else {return state}
